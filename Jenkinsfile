@@ -1,17 +1,18 @@
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building...'
-                sh 'build-command'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-                sh 'test-command'
-            }
-        }
-    }
-}
+ pipeline {
+     agent any
+     stages {
+         stage('Build') {
+             steps {
+                 echo 'Building...'
+                 bat 'your-build-command'
+             }
+         }
+         stage('Test') {
+             steps {
+                 echo 'Testing...'
+                 bat 'your-test-command'
+             }
+         }
+         // Додайте інші стадії за необхідностю
+     }
+ }
